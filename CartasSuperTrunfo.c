@@ -39,7 +39,7 @@ int main(){
 
     printf("estado1: %s - codigo1: %s - cidade1: %s\n", estado1, codigo1,cidade1);
     printf("populacao1: %d - turismo1: %d\n", populacao1, turismo1);
-    printf("area1: %2.f km²- pib1: %.2f bilhoes\n", area1, pib1);
+    printf("area1: %.2f km²- pib1: %.2f bilhoes\n", area1, pib1);
     printf("Densidade_Populacional1: %.2f - Pib_Per_capta1: %.2f\n",Densidade_Populacional1, Pib_Per_Capta1);
 
     printf("carta: 02 \n");
