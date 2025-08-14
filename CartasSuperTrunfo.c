@@ -33,7 +33,7 @@ int main(){
     printf("pib1: ");
     scanf("%f", &pib1);
 
-    Densidade_Populacional1 = (populacao1 / area1);
+    Densidade_Populacional1 =(float) (populacao1 / area1);
     pib_Per_Capta1 = ( pib1 * 1000000000.0 / populacao1);
 
     printf("estado1: %s - codigo1: %s - cidade1: %s\n", estado1, codigo1,cidade1);
@@ -64,7 +64,7 @@ int main(){
     printf("pib2: ");
     scanf("%f", &pib2);
 
-    Densidade_Populacional2 = (populacao2 / area2);
+    Densidade_Populacional2 = (float) (populacao2 / area2);
     Pib_Per_Capta2 = (pib2 * 1000000000.0 / populacao2);
 
     printf("estado2: %s - codigo2: %s - cidade2: %s \n", estado2, codigo2, cidade2);
