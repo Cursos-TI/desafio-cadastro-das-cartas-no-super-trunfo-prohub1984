@@ -44,13 +44,13 @@ int main(){
     printf("carta: 02 \n");
 
     printf("estado2: ");
-    scanf("%s", estado2);
+    scanf(" %19[^\n]", estado2);
 
     printf("codigo2: ");
     scanf("%s", codigo2);
 
     printf("cidade2: ");
-    scanf("%s", cidade2);
+    scanf(" %29[^\n]", cidade2);
 
     printf("populacao2: ");
     scanf("%d", &populacao2);
