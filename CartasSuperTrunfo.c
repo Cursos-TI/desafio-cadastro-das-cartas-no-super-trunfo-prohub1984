@@ -85,11 +85,20 @@ int main(){
     printf("populacao carta 1 > carta 2: %d\n", populacao1 > populacao2);
     printf("area carta 1 > carta 2: %d\n", area1 > area2);
     printf("pib carta 1 > carta 2 : %d\n",pib1 > pib2);
-    printf("pontos turistico carta > carta 2: %d\n", turismo1 > turismo2);
+    printf("pontos turistico carta 1 > carta 2: %d\n", turismo1 > turismo2);
     printf("densidade populacional carta 1 < carta 2: %d\n", Densidade_Populacional1 < Densidade_Populacional2);
     printf("pib per capita carta 1 < carta 2: %d\n",Pib_Per_Capta1 < Pib_Per_Capta2);
     printf("super poder carta 1 > carta 2: %d\n", superPoder1 > superPoder2);
     
+    if(populacao1 > populacao2){
+        printf("carta 1 venceu!\n");
+        printf("carta 1- rio de janeiro (rj): 6.000000 hab.\n");
+        printf("resultado: carta 1 (rio de janeiro) venceu!");
+    }else{
+        printf("carta 2 venceu!/n");
+        printf("carta 2- fortaleza (ce): 2500000 hab.\n");
+        printf("resultado: carta 2 (fortaleza) venceu!");
+    }
     
 
     
