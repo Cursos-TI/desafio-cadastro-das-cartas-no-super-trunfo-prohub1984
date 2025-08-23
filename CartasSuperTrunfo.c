@@ -2,6 +2,8 @@
 
 int main(){
 
+    //declaracao de variaveis e seus nomes
+
     char estado1[20] , estado2[20];
     char codigo1[10] , codigo2[10];
     char cidade1[30], cidade2[30];
@@ -10,6 +12,8 @@ int main(){
     float Densidade_Populacional1, Densidade_Populacional2, Pib_Per_Capta1, Pib_Per_Capta2;
     float superPoder1, superPoder2;  
     int resultadoCarta1, resultadoCarta2;
+
+    //entrando com nome e valores das variaveis inseridos pelo usuario
 
     printf("carta: 01 \n");
 
@@ -34,17 +38,22 @@ int main(){
     printf("pib1: ");
     scanf("%f", &pib1);
 
+    //casting explicito realiza a operacao no tipo de dado correto
+
     Densidade_Populacional1 = (float) (populacao1 / area1);
     Pib_Per_Capta1 = (float) (pib1 *1000000000.0f / populacao1);
 
-    superPoder1 = (float) (populacao1+area1+pib1+Pib_Per_Capta1+turismo1+ 1 / Densidade_Populacional1);
+    superPoder1 = (float) (1 / Densidade_Populacional1 + populacao1 + area1 + pib1 + Pib_Per_Capta1 + turismo1);
 
+    //saida de dados imprimindo resultado de carta 1
 
     printf("estado1: %s\n codigo1: %s\n cidade1: %s\n", estado1, codigo1,cidade1);
     printf("populacao1: %d\n turismo1: %d\n", populacao1, turismo1);
     printf("area1: %.2f km²\n pib1: %.2f bilhoes\n", area1, pib1);
     printf("Densidade_Populacional1: %.2f hab/km²\n Pib_Per_capta1: %.2f reais\n",Densidade_Populacional1, Pib_Per_Capta1);
     printf(" super poder1: %.2f\n", superPoder1);
+
+     //entrando com nome e valores das variaveis inseridos pelo usuario
 
     printf("carta: 02 \n");
 
@@ -69,10 +78,14 @@ int main(){
     printf("pib2: ");
     scanf("%f", &pib2);
 
+    //casting explicito realiza a operacao no tipo de dado correto
+
     Densidade_Populacional2 = (float) (populacao2 / area2);
     Pib_Per_Capta2 = (float) (pib2 *1000000000.0f / area2);
 
-    superPoder2 = (float) (populacao2+pib2+Pib_Per_Capta2+turismo2+ 1 / Densidade_Populacional2);
+    superPoder2 = (float) (1 / Densidade_Populacional2 + populacao2 + area2 + pib2 + Pib_Per_Capta2 + turismo2);
+
+     //saida de dados imprimindo resultado de carta 1
 
     printf("estado2: %s\n codigo2: %s\n cidade2: %s \n", estado2, codigo2, cidade2);
     printf("populacao2: %d\n turismo2: %d \n",populacao2, turismo2);
@@ -80,7 +93,7 @@ int main(){
     printf("Densidade_Populacional2: %.2f hab/km²\n Pib_Per_Capta: %.2f reais\n", Densidade_Populacional2, Pib_Per_Capta2);
     printf("super poder2: %.2f\n", superPoder2);
 
-    //comparacoes de valores entre variaveis
+    //comparacoes de valores usando operadores relacionais
 
     printf("populacao carta 1 > carta 2: %d\n", populacao1 > populacao2);
     printf("area carta 1 > carta 2: %d\n", area1 > area2);
@@ -90,16 +103,41 @@ int main(){
     printf("pib per capita carta 1 < carta 2: %d\n",Pib_Per_Capta1 < Pib_Per_Capta2);
     printf("super poder carta 1 > carta 2: %d\n", superPoder1 > superPoder2);
     
+    //comparacao de valores usando if-else
+
     if(populacao1 > populacao2){
         printf("carta 1 venceu!\n");
         printf("carta 1- rio de janeiro (rj): 6.000000 hab.\n");
+        printf("carta 2- fortaleza (ce): 2500000 hab.\n");
         printf("resultado: carta 1 (rio de janeiro) venceu!");
     }else{
+
+        printf("comparacao de cartas (atributo:populacao):\n");
         printf("carta 2 venceu!/n");
+        printf("carta 1- rio de janeiro (rj): 6.000000 hab.\n");
         printf("carta 2- fortaleza (ce): 2500000 hab.\n");
         printf("resultado: carta 2 (fortaleza) venceu!");
     }
+
+    if(turismo1 > turismo2){
+
+        printf("comparacao de cartas (atributo:pontos turistico):\n");
+        printf("carta 1 venceu!\n");
+        printf("carta 1- rio de janeiro (rj): 90\n");
+        printf("carta 2- fortaleza (ce): 65\n");
+        printf("resultado: carta 1 (rio de janeiro) venceu!");
+        
+    }
+
+    if(Densidade_Populacional1 < Densidade_Populacional2){
+        printf("comparacao de cartas(densidade populacional):\n");
+        printf("carta 1 venceu!\n");
+        printf("carta 1- rio de janeiro (rj):5000 \n");
+        printf("carta 2- fortaleza (ce):8.125 \n");
+        printf("resultado: carta 1 (rio de janeiro) venceu!");
+    }
     
+
 
     
     
